@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galeria com Lightbox</title>
+    <!-- Bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="estilo.css" />
+    <!-- JS -->
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>Galeria com Lightbox</h1>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img
+          src="./img/image-1.jpg"
+          data-src="img/image-1.jpg"
+          alt="imagem 01"
+          class="gallery-image"
+        />
+      </div>
+      <div class="gallery-item">
+        <img
+          src="./img/image-2.jpg"
+          data-src="img/image-2.jpg"
+          alt="imagem 02"
+          class="gallery-image"
+        />
+      </div>
+      <div class="gallery-item">
+        <img
+          src="./img/image-3.jpg"
+          data-src="img/image-3.jpg"
+          alt="imagem 03"
+          class="gallery-image"
+        />
+      </div>
+      <div class="gallery-item">
+        <img
+          src="./img/image-4.jpg"
+          data-src="img/image-4.jpg"
+          alt="imagem 04"
+          class="gallery-image"
+        />
+      </div>
+    </div>
+    <div class="lightbox">
+      <div class="lightbox-content">
+        <img src="" alt="Imagem em destaque" class="lightbox-image" />
+      </div>
+      <a href="#" class="lightbox-close"><i class="bi bi-x"></i></a>
+    </div>
+  </body>
+</html>
