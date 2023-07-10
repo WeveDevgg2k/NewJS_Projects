@@ -1,0 +1,31 @@
+* {
+  font-family: "Helvetica";
+}
+
+body {
+  background: #ccc;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+}
+
+button {
+  background: #008cba;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 0.8rem 1rem;
+  font-size: 1.2rem;
+  margin: 0.5rem 0.5rem 0;
+  transition: 0.5s;
+}
+
+button:hover {
+  background: #03769c;
+}
