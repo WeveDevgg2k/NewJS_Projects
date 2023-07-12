@@ -1,0 +1,26 @@
+const calculateBtn = document.querySelector('#calculateBtn')
+
+function calculateTip() {
+
+  const billAmount = parseFloat(document.querySelector('#billAmount').value)
+  const serviceQuality = parseFloat(document.querySelector('#serviceQuality').value)
+
+  if (billAmount === "") {
+    alert('Por favor, preencha os dados.')
+    return
+  }
+
+  const tipAmount = billAmount * serviceQuality // 100 * 0.1
+
+  const totalAmount = billAmount + tipAmount
+
+  const tipAmountInput = document.querySelector('#tipAmount')
+  const totalAmountInput = document.querySelector('#totalAmount')
+
+  tipAmountInput.value = tipAmount.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
+  totalAmountInput.value = totalAmount.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
+
+
+}
+
+calculateBtn.addEventListener('click', calculateTip)
