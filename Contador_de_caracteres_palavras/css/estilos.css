@@ -1,0 +1,47 @@
+* {
+  font-family: Helvetica;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  align-items: center;
+  gap: 1rem;
+}
+.container .field {
+  width: 500px;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.container .field label {
+  font-size: 0.9rem;
+}
+.container .field textarea {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.container .counter {
+  font-size: 0.8rem;
+  color: #555;
+}
+.container #toggle {
+  background: #4285f4;
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.container #toggle:hover {
+  background: #0069d9;
+}
+
+/*# sourceMappingURL=estilos.css.map */
