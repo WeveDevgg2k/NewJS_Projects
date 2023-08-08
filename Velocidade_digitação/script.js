@@ -1,0 +1,76 @@
+const texto = document.querySelector('#texto')
+const entrada = document.querySelector('#entrada')
+const reiniciar = document.querySelector('#reiniciar')
+const resultado = document.querySelector('#resultado')
+const historico = document.querySelector('#historico')
+const alternarTemaBtn = document.querySelector('#alternarTema')
+
+const textos = [
+  "Exemplo de uma texto para digitar",
+  "Salve o Corinthians, o Campeão dos Campeões, eternamente dentro de nossos Corações",
+  "I just wanna be yours wanna be yours wanna be yours wanna be yours",
+  "Enemy fire! enemy fire! Alpha team engage.",
+  "Hallo! wie gehts, woher kommst du? ich heisse Max!",
+  "Outro exemplo genérico de texto para digitar"
+]
+
+function novoTexto() {
+  const index = Math.floor(Math.random() * textos.length)
+  texto.textContent = textos[index]
+}
+
+function atualizarTeste() {
+  iniciar()
+
+  if (entrada.value === texto.textContent) {
+    verificar()
+  }
+}
+
+function iniciar() {
+  const statusDoTeste = JSON.parse(localStorage.getItem('testeEmAndamento'))
+  if (!statusDoTeste) {
+    localStorage.setItem('tempoInicial', new Date().getTime())
+    localStorage.setItem('testeEmAndamento', true)
+  }
+}
+
+function verificar() {
+  const tempoFinal = new Date().getTime()
+  const tempoInicial = JSON.parse(localStorage.getItem('tempoInicial'))
+  const tempoGasto = (tempoFinal - tempoInicial) / 1000
+
+  resultado.textContent = `Parabéns!!! você levou ${tempoGasto} segundos para terminar!!!`
+
+  adicionarAoHistorico(texto.textContent, tempoGasto)
+
+  localStorage.setItem('testeEmAndamento', false)
+  entrada.value = ""
+  novoTexto()
+}
+
+function adicionarAoHistorico(textoDigitado, tempoGasto) {
+  const itemHistorico = document.createElement('p')
+
+
+
+  itemHistorico.textContent = `Texto "${textoDigitado}" - Tempo "${tempoGasto}" segundos`
+  historico.appendChild(itemHistorico)
+}
+
+function reiniciarTeste() {
+  entrada.value = ""
+  resultado.textContent = ""
+  novoTexto()
+  localStorage.setItem('testeEmAndamento', false)
+  historico.innerHTML = ""
+}
+
+entrada.addEventListener('keyup', atualizarTeste)
+reiniciar.addEventListener('click', reiniciarTeste)
+alternarTemaBtn.addEventListener('click', () => {
+  document.body.classList.toggle('claro')
+  document.body.classList.toggle('escuro')
+})
+
+novoTexto()

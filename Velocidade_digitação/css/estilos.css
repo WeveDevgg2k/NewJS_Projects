@@ -1,0 +1,67 @@
+body {
+  font-family: Arial;
+  box-sizing: border-box;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  text-align: center;
+}
+body h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+body .instrucoes {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+  text-align: justify;
+}
+body #texto {
+  font-size: 1.2rem;
+  background: #f3f3f3;
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+}
+body #entrada {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+}
+body #resultado {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+body button {
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+body button:hover {
+  background: #0056b3;
+}
+body #alternarTema {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.claro {
+  background: #fff;
+  color: #333;
+}
+
+.escuro {
+  background: #333;
+  color: #fff;
+}
+.escuro #texto {
+  color: #333;
+}
+
+/*# sourceMappingURL=estilos.css.map */
