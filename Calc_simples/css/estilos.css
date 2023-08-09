@@ -1,0 +1,52 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #f5f5f5;
+  margin: 0;
+  font-family: Arial;
+}
+body #calculadora {
+  width: 200px;
+  background: #fff;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+}
+body #calculadora #display {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+body #calculadora #display #displayInput {
+  text-align: center;
+  width: 100%;
+  border: none;
+}
+body #calculadora #teclado {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+body #calculadora #teclado button {
+  height: 60px;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+body #calculadora #teclado button:hover {
+  background: #ccc6c6;
+  border: 1px solid #ccc;
+}
+body #calculadora #teclado .num, body #calculadora #teclado .ponto, body #calculadora #teclado .igual {
+  color: #333;
+}
+body #calculadora #teclado .operador {
+  color: #f7931b;
+}
+
+/*# sourceMappingURL=estilos.css.map */
